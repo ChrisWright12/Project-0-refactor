@@ -6,9 +6,10 @@ import com.rev.models.Account;
 
 public interface AccountManager {
 	
-	  Account create(Account account);
+	  Account createAccount(Account account);
 
 	  Account findById(int id);
+	  Account findByType(String type);
 
 	  List<Account> findAll();
 	    
@@ -16,7 +17,5 @@ public interface AccountManager {
 
 	  List<Account> findByUser(int userId);
 
-	  Account findByName(String name);
-	  List<Account> findBySearchValue(String searchValue);
 
 }

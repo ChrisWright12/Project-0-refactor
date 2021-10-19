@@ -8,7 +8,7 @@ public interface UserManager {
 	
 	User findLogin(User user);
 
-	User createAccount(User user);
+	User createUser(User user);
 	
 	List<User> getUsers();
 	

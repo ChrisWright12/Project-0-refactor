@@ -15,7 +15,7 @@ public class AccountManagerImpl implements AccountManager {
     private AccountDAO daoAccount;
 
     @Override
-    public Account create(Account account){
+    public Account createAccount(Account account){
         return daoAccount.save(account);
     }
 
@@ -42,9 +42,5 @@ public class AccountManagerImpl implements AccountManager {
         return daoAccount.findByName(type);
     }
 
-	@Override
-	public List<Account> findBySearchValue(String searchValue) {
-		return daoAccount.findBySearchValue(searchValue);
-	}
 
 }

@@ -28,7 +28,7 @@ public class UserManagerImpl implements UserManager {
 	
 	@Override
 	@Transactional
-	public User createAccount(User user) {
+	public User createUser(User user) {
 		try {
 			User login = findLogin(user);
 			if(login == null) {

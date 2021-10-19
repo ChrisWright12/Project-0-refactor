@@ -37,7 +37,7 @@ private static final Logger logger = LogManager.getLogger(UserController.class);
 	@PostMapping(path="/createAccount", consumes="application/json", produces="application/json")
 	public ResponseEntity<User> createAccount(@RequestBody User user) {
 		logger.info("POST to /login/createAccount");
-		return new ResponseEntity<>(userManager.createAccount(user), HttpStatus.CREATED);
+		return new ResponseEntity<>(userManager.createUser(user), HttpStatus.CREATED);
 	}
 
 }

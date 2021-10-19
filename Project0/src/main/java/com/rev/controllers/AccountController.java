@@ -29,7 +29,7 @@ public class AccountController {
 	@PostMapping(path = "/createQuiz", produces = "application/json", consumes = "application/json")
 	public Account create(@RequestBody Account account) {
 		logger.info("created new quiz");
-		account = manager.create(account);	
+		account = manager.createAccount(account);	
 		return account;
 	}
 
@@ -50,12 +50,4 @@ public class AccountController {
 	}
 	
 	
-	
-	@CrossOrigin(origins = "http://localhost:4200")
-	@GetMapping(path="/search/{searchValue}", produces="application/json")
-	public List<Account> findBySearchValue(@PathVariable String searchValue) {
-		logger.info("GET to /search/" + searchValue);
-		return manager.findBySearchValue(searchValue);
-	}
-
 }
